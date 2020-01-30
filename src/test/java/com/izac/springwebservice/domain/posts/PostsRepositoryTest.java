@@ -41,8 +41,8 @@ public class PostsRepositoryTest {
 
         //then
         Posts posts = postsList.get(0);
-        assertThat(Posts.getTitle(), is("테스트 게시글"));
-        assertThat(Posts.getContent(), is("테스트 본문"));
+        assertThat(posts.getTitle(), is("테스트 게시글"));
+        assertThat(posts.getContent(), is("테스트 본문"));
     }
 
     @Test
@@ -59,7 +59,7 @@ public class PostsRepositoryTest {
 
         //then
         Posts posts = postsList.get(0);
-        assertTrue(Posts.getCreatedDate().isAfter(now));
-        assertTrue(Posts.getModifiedDate().isAfter(now));
+        assertTrue(posts.getCreatedDate().isAfter(now));
+        assertTrue(posts.getModifiedDate().isAfter(now));
     }
 }
