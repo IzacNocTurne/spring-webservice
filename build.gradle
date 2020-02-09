@@ -1,5 +1,6 @@
+
 plugins {
-    id 'org.springframework.boot' version '2.2.4.RELEASE'
+    id 'org.springframework.boot' version  '2.2.4.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
 }
@@ -18,10 +19,12 @@ repositories {
     mavenCentral()
 }
 
+
 //Spring Boot Overriding
 ext['hibernate.version'] = '5.2.11.Final'
 
 dependencies {
+    compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
