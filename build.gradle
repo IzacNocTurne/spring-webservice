@@ -1,6 +1,4 @@
 
-
-
 plugins {
     id 'org.springframework.boot' version  '2.2.4.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
@@ -46,10 +44,6 @@ dependencies {
     testCompileOnly 'junit:junit:4.12'
     testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.1.0'
 }
-
-   // repositories {
-   //     jcenter()
-    //}
 
 test {
     useJUnitPlatform()
