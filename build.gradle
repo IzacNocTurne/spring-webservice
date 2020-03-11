@@ -51,10 +51,10 @@ dependencies {
         jcenter()
     }
 
-    dependencies {
-        testCompileOnly 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.9.2'
-    }
-apply plugin: 'org.asciidoctor.convert'
+    //dependencies {
+   //     testCompileOnly 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.9.2'
+   // }
+//apply plugin: 'org.asciidoctor.convert'
 
 test {
     useJUnitPlatform()
