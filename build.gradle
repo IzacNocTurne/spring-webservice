@@ -5,7 +5,7 @@ plugins {
     id 'org.springframework.boot' version  '2.2.4.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
-    id("org.asciidoctor.convert") version "1.5.9.2"
+    id 'org.asciidoctor.convert' version "1.5.9.2"
 }
 
 group = 'com.izac'
@@ -45,8 +45,16 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
     testCompileOnly 'junit:junit:4.12'
     testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.1.0'
-    'org.asciidoctor:asciidoctor-gradle-plugin:1.5.9.2'
 }
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        testCompileOnly 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.9.2'
+    }
+apply plugin: 'org.asciidoctor.convert'
 
 test {
     useJUnitPlatform()
